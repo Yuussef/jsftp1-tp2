@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+      <h:head>
+    	
+    </h:head>
+    <h:body>
+
+    	<h1>JSF dataTable </h1>
+<h:form>
+    		<h:dataTable var="c" value="#{TabbBean.myTabbList}" >
+    		
+    		<h:column>
+    		<f:facet name="header"> <h:outputText value="nom"/></f:facet>
+    		<h:outputText> value="#{c.nom}"</h:outputText>
+    	 	</h:column>
+    	 	
+    		<h:column>
+    		<f:facet name="header"> <h:outputText value="mdp"/></f:facet>
+    		<h:outputText> value="#{c.mdp}"</h:outputText>
+    	 	</h:column>
+    	 
+</h:dataTable>
+<h:commandButton actionListener="#{TabbBean.process}" value="ok "/>
+</h:form>
+    </h:body>
+</html>
